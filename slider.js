@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // API Base URL
     const API_BASE_URL = '/api';
 
-    // Banner Slider Functionality
+    // Banner Slider Functionalityy
     let slides = [];
     let dots = [];
     let prevBtn = null;
