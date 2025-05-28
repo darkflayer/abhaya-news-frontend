@@ -1,0 +1,232 @@
+/* Admin Panel Styles */
+@import url('colors.css');
+
+/* Admin Logo Style */
+header .logo h1 {
+    background: linear-gradient(to right, var(--secondary-color), var(--accent-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.admin-panel {
+    background-color: var(--neutral-light); /* Off-White */
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.admin-panel h2 {
+    margin-bottom: 20px;
+    color: var(--neutral-dark);
+    border-bottom: 2px solid var(--accent-teal);
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.admin-panel h2::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--accent-purple);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    font-family: inherit;
+    background-color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-teal);
+    box-shadow: 0 0 0 2px rgba(42, 157, 143, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+form button {
+    background: var(--gradient-primary);
+    color: var(--white);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+form button:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Auth Protection */
+.auth-required {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.auth-required h2 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.auth-required p {
+    margin-bottom: 20px;
+}
+
+.auth-required button {
+    background: var(--gradient-primary);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.auth-required button:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Success Message */
+.success-message {
+    background-color: var(--success);
+    color: var(--white);
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+/* Error Message */
+.error-message {
+    background-color: var(--danger);
+    color: var(--white);
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+/* News Table Styles */
+.news-table-container {
+    overflow-x: auto;
+}
+
+.news-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.news-table th,
+.news-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.news-table th {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+}
+
+.news-table tr:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.news-table .action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.news-table .edit-btn,
+.news-table .delete-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.news-table .edit-btn {
+    background-color: var(--accent-teal);
+    color: var(--white);
+}
+
+.news-table .delete-btn {
+    background-color: var(--danger);
+    color: var(--white);
+}
+
+.news-table .edit-btn:hover,
+.news-table .delete-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Pagination for News Table */
+#newsPagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#newsPagination button {
+    background: var(--gradient-primary);
+    color: var(--white);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#newsPagination button:hover:not([disabled]) {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#newsPagination button[disabled] {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+#pageInfo {
+    font-weight: 600;
+}
