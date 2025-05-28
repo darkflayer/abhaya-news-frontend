@@ -103,7 +103,7 @@ function setupLoginButton() {
 
                         try {
                             // Call the actual backend API for login
-                            const response = await fetch('/api/admin/login', {
+                            const response = await fetch('https://abhaya-news-backend-zjkh.onrender.com/api/admin/login', {
                                 method: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json'

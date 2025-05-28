@@ -1,5 +1,5 @@
 // API Base URL - Use relative path for proxy to work
-const API_BASE_URL = '/api';
+const API_BASE_URL = 'https://abhaya-news-backend-zjkh.onrender.com/api';
 
 // DOM Elements
 const uploadForm = document.getElementById('uploadForm');

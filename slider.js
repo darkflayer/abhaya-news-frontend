@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // API Base URL
-    const API_BASE_URL = '/api';
+    const API_BASE_URL = 'https://abhaya-news-backend-zjkh.onrender.com/api';
 
     // Banner Slider Functionality
     let slides = [];

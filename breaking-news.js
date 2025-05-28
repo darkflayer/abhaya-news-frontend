@@ -117,7 +117,7 @@ class BreakingNewsTicker {
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), 2000); // Reduced to 2 seconds
 
-            const response = await fetch('/api/news?limit=8&page=1&fields=_id,title,createdAt,category', {
+            const response = await fetch('https://abhaya-news-backend-zjkh.onrender.com/api/news?limit=8&page=1&fields=_id,title,createdAt,category', {
                 signal: controller.signal,
                 headers: {
                     'Accept': 'application/json',
@@ -218,7 +218,7 @@ class BreakingNewsTicker {
             if (newsUrl && newsUrl !== '') {
                 window.location.href = newsUrl;
             } else {
-                window.location.href = `/api/news/${newsId}`;
+                window.location.href = `https://abhaya-news-backend-zjkh.onrender.com/api/news/${newsId}`;
             }
         }
 
@@ -271,7 +271,7 @@ function initBreakingNews() {
 // Preload breaking news data as soon as script loads
 (function preloadBreakingNews() {
     // Start fetching data immediately in the background
-    const preloadPromise = fetch('/api/news?limit=8&page=1&fields=_id,title,createdAt,category', {
+    const preloadPromise = fetch('https://abhaya-news-backend-zjkh.onrender.com/api/news?limit=8&page=1&fields=_id,title,createdAt,category', {
         headers: {
             'Accept': 'application/json',
             'Cache-Control': 'no-cache'
