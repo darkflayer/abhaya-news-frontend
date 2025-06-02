@@ -8,7 +8,7 @@ let categoryCurrentPage = 1;
 let categoryTotalPages = 1;
 let currentCategoryName = '';
 
-document.addEventListener('DOMContentLoaded', async function() {
+document.addEventListener('DOMContentLoaded', async function () {
     // Get the current category from the page URL
     const currentPage = window.location.pathname.split('/').pop().replace('.html', '');
 
